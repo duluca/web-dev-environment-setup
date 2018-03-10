@@ -21,11 +21,6 @@ then
     brew cask install github-desktop
     echo "Verify installation of GitHub Desktop manually."
 
-    echo "Installing JDK"
-    brew cask install java
-    jdkVersion=$(java -version)
-    echo "JDK: $jdkVersion"
-
     echo "Installing NodeJS"
     brew install nodejs
     nodeVersion=$(node -v)
@@ -36,10 +31,6 @@ then
     echo "Installing VS Code"
     brew cask install visual-studio-code
     echo "Verify installation of VS Code manually."
-
-    echo "Installing STS"
-    brew cask install sts
-    echo "Verify installation of STS manually."
 else
     echo "Aborted."
 fi
@@ -52,15 +43,6 @@ fi
 #   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
 # else
 #   echo "Found brew"
-# fi
-
-# echo "Checking if Java is installed"
-# which -s java
-# if [[ $? != 0 ]] ; then
-#   echo "Installing Java"
-#   brew cask install java
-# else
-#   echo "Found Java"
 # fi
 
 # echo "Checking for Node version ${NODE_VERSION}"
