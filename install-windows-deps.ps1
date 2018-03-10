@@ -29,13 +29,8 @@ switch ($result)
             Write-Output "git: $gitVersion"
             Write-Output "Verify installation of GitHub Desktop manually."
 
-            Write-Output "Installing JDK8"
-            choco install jdk8 -y
-            $jdkVersion = java -version
-            Write-Output "JDK: $jdkVersion"
-
             Write-Output "Installing NodeJS"
-            choco install nodejs -y
+            choco install nodejs-lts -y
             $nodeVersion = node -v
             Write-Output "Node: $nodeVersion"
             Write-Output "Remember to avoid odd numbered major Node releases. Keep 8.x.x, avoid 7.x.x."
@@ -45,10 +40,6 @@ switch ($result)
             Write-Output "Installing VS Code"
             choco install VisualStudioCode -y
             Write-Output "Verify installation of VS Code manually."
-
-            Write-Output "Installing STS"
-            Set-ExecutionPolicy ByPass; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://gist.githubusercontent.com/duluca/92ae050c774f79daff38e3e6a6a627e1/raw/0d211e4fe4738b176b9188d1e4b51adb5ce521d1/install-sts.ps1'))
-            Write-Output "Verify installation of STS manually."
         }
     1 {"Aborted."}
 }
