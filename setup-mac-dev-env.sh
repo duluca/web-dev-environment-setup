@@ -6,36 +6,46 @@ echo "Execute Installation Script"
 read -r -p "Absolutely NO WARRANTIES or GUARANTEES are provided. Are you sure you want to continue? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
 then
-    # This script is intentionally kept simple to demonstrate basic automation techniques.
-    echo "Note: This script assumes a clean environment and therefore is not resilient."
-
     echo "Installing brew"
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
     echo "Installing git"
     brew install git
-    gitVersion=$(git --version)
-    echo "git: $gitVersion"
+    brew upgrade git
 
     echo "Installing GitHub Desktop"
-    brew cask install github-desktop
-    echo "Verify installation of GitHub Desktop manually."
+    brew cask install github
+    brew cask upgrade github
 
     echo "Installing NodeJS"
-    brew install nodejs
+    brew install node@10
+    brew upgrade node@10
+
+    echo "Installing Docker"
+    brew cask install docker
+    brew cask upgrade docker
+
+    echo "Installing AWS"
+    brew install awscli
+    brew upgrade awscli
+
+    echo "Installing VS Code"
+    brew cask install visual-studio-code
+    brew cask upgrade visual-studio-code
+
+    echo "Results:"
+    echo "Verify installation of AWS, Docker, GitHub Desktop and VS Code manually."
+    gitVersion=$(git --version)
+    echo "git: $gitVersion"
     nodeVersion=$(node -v)
     echo "Node: $nodeVersion"
     npmVersion=$(npm -v)
     echo "npm: $npmVersion"
-
-    echo "Installing VS Code"
-    brew cask install visual-studio-code
-    echo "Verify installation of VS Code manually."
 else
     echo "Aborted."
 fi
 
-## Samples of More sophisticated install & verify routine
+## Samples of more sophisticated install & verify routine
 # echo "Checking if brew is installed"
 # which -s brew
 # if [[ $? != 0 ]] ; then
