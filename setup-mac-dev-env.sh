@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# In order to be able to execute this script, run 'chmod a+x install-mac-deps.sh' to make the file executable
+# In order to be able to execute this script, run 'chmod a+x setup-mac-dev-env.sh' to make the file executable
 
 echo "Execute Installation Script"
 read -r -p "Absolutely NO WARRANTIES or GUARANTEES are provided. Are you sure you want to continue? [y/N] " response
