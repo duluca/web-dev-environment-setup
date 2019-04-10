@@ -1,23 +1,23 @@
 
 <#PSScriptInfo
 
-.VERSION 1.0
+.VERSION 1.1
 
 .GUID 4d6860ae-67e0-46ed-9a8d-0e9a3e4f4631
 
 .AUTHOR duluca
 
-.COMPANYNAME
+.COMPANYNAME duluca
 
-.COPYRIGHT
+.COPYRIGHT 2019
 
-.TAGS
+.TAGS Windows, Web Development, Development Tools, Angular
 
-.LICENSEURI
+.LICENSEURI https://github.com/duluca/web-dev-environment-setup/blob/master/LICENSE
 
-.PROJECTURI
+.PROJECTURI https://github.com/duluca/web-dev-environment-setup
 
-.ICONURI
+.ICONURI https://angularforenterprise.com/favicon.ico
 
 .EXTERNALMODULEDEPENDENCIES
 
@@ -25,7 +25,7 @@
 
 .EXTERNALSCRIPTDEPENDENCIES
 
-.RELEASENOTES
+.RELEASENOTES Installs Chocolatey, Node, Git, GitHub Desktop, VS Code, Docker and AWS CLI. Added Node Version Switcher.
 
 
 #>
@@ -65,8 +65,8 @@ switch ($result) {
     Write-Output "Installing Git & GitHub Desktop"
     choco.exe upgrade git github-desktop -y
 
-    Write-Output "Installing NodeJS"
-    choco.exe upgrade nodejs-lts -y
+    Write-Output "Installing NodeJS and NVS"
+    choco.exe upgrade nodejs-lts nvs -y
 
     Write-Output "Installing Docker"
     choco.exe upgrade docker docker-for-windows -y
