@@ -18,8 +18,8 @@ then
     brew cask upgrade github
 
     echo "Installing NodeJS"
-    brew install node@10
-    brew upgrade node@10
+    brew install node@12
+    brew upgrade node@12
 
     echo "Installing Docker"
     brew cask install docker
