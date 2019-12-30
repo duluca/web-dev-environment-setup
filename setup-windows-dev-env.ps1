@@ -79,7 +79,7 @@ switch ($result) {
 
     RefreshEnv.cmd
     Write-Output "Results:"
-    Write-Output "Verify installation of AWS, Docker, GitHub Desktop and VS Code manually."
+    Write-Output "Verify installation of GitHub Desktop and VS Code manually."
     $awsVersion = aws.exe --version
     Write-Output "aws: $awsVersion"
     $dockerVersion = docker.exe --version
