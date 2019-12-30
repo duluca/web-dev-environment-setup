@@ -58,7 +58,7 @@ switch ($result) {
   0 {
     Write-Output "Installing chocolatey"
     Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-    Write-Output "Refreshing environment variables. If rest of the scritp fails, restart elevated shell and rerun script."
+    Write-Output "Refreshing environment variables. If rest of the script fails, restart elevated shell and rerun script."
     $env:Path = [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path", "User")
 
     Write-Output "Assuming chocolatey is already installed"
@@ -69,7 +69,7 @@ switch ($result) {
     choco.exe upgrade nodejs-lts nvs -y
 
     Write-Output "Installing Docker"
-    choco.exe upgrade docker docker-for-windows -y
+    choco.exe upgrade docker-cli docker-for-windows -y
 
     Write-Output "Installing AWS"
     choco.exe upgrade awscli -y
@@ -80,6 +80,10 @@ switch ($result) {
     RefreshEnv.cmd
     Write-Output "Results:"
     Write-Output "Verify installation of AWS, Docker, GitHub Desktop and VS Code manually."
+    $awsVersion = aws.exe --version
+    Write-Output "aws: $awsVersion"
+    $dockerVersion = docker.exe --version
+    Write-Output "docker: $dockerVersion"
     $gitVersion = git.exe --version
     Write-Output "git: $gitVersion"
     $nodeVersion = node.exe -v
