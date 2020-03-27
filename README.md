@@ -1,23 +1,47 @@
 # Web Development Environment Setup Scripts
 > Scripts for Windows 10 and macOS X to install web development tools
-> Absolutely NO WARRANTIES or GUARANTEES are provided.
 
-## Windows 10 Scripts
-*System Requirements:* Windows 10 Pro v1703+ with PowerShell v5.1+ 
-- In Powershell, from the folder where you've cloned this project, execute `Set-ExecutionPolicy Unrestricted; .\setup-windows-dev-env.ps1`
+__Absolutely NO WARRANTIES or GUARANTEES are provided.__
 
-*or, alternatively*
+## Minimum System Requirements
+__Windows 10:__ Windows 10 Pro v1703+ with PowerShell v5.1+ (Recommended: Powershell Core 7)
 
-- Run `Install-Script -Name setup-windows-dev-env` to download the script from [PowerShell Gallery](https://www.powershellgallery.com/packages/setup-windows-dev-env/1.0).
-- Then execute the script from Powershell `setup-windows-dev-env.ps1`
+__MacOS X:__ macOS Sierra v10.12.6+ with Terminal (Bash or Oh My Zsh)
+
+## Install
+
+Execute the following command in for you system to begin installation:
+
+### Windows Powershell
+```powershell
+Install-Script -Name setup-windows-dev-env
+setup-windows-dev-env.ps1
+```
+* Installs from [PowerShell Gallery](https://www.powershellgallery.com/packages/setup-windows-dev-env).
+
+### MacOS Terminal
+```bash
+bash <(wget -O - https://git.io/JvHi1)
+```
+* Installs from this repo on [GitHub](https://git.io/JvHi1)
+
+## Manual Installation Steps
+If it irks you to run scripts automatically from the internet (and in 99% of cases it should), then you can clone this repo and install the scripts manually.
+
+### Windows Powershell
+- In the folder where you've cloned this project, execute:
+```powershell
+Set-ExecutionPolicy Unrestricted; .\setup-windows-dev-env.ps1
+```
 
 If you're interested in developing your own scripts and publishing them, check out https://github.com/PowerShell/PowerShell. 
 
-## macOS X Scripts
-*System Requirements:* macOS Sierra v10.12.6+ with Terminal (Bash or Oh My Zsh)
-- In Terminal, from the folder where you've cloned this project, run `chmod a+x setup-mac-dev-env.sh` to make the script executable
-- Execute the installation script with `./setup-mac-dev-env.sh`
-
+### MacOS Terminal
+- In the folder where you've cloned this project, execute:
+```bash
+chmod a+x setup-mac-dev-env.sh
+./setup-mac-dev-env.sh
+```
 ## Get the book
 These scripts have been developed in support of my book _Angular for Enterprise-Ready Web Applications_. You can get the book on http://AngularForEnterprise.com.
 
