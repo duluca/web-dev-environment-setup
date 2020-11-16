@@ -4,15 +4,20 @@
 __Absolutely NO WARRANTIES or GUARANTEES are provided.__
 
 ## Minimum System Requirements
-__Windows 10:__ Windows 10 Pro v1703+ with PowerShell v5.1+ (Recommended: Powershell Core 7)
+__Windows 10:__ Windows 10 Pro v1703+ with PowerShell v5.1+ (Recommended: [Powershell 7](https://github.com/PowerShell/PowerShell/releases))
+
+> Install [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701) for the best command-line experience, then set Powershell 7 as the default option in `settings.json`
 
 __MacOS X:__ macOS Sierra v10.12.6+ with Terminal (Bash or Oh My Zsh)
+
+> Launch XCode to force installation of necessary command line utilities
 
 ## Install
 
 Execute the following command in for you system to begin installation:
 
 ### Windows Powershell
+> Ensure that Powershell `scripts` folder is setup in the Path variable in System Environment Variables
 ```powershell
 Install-Script -Name setup-windows-dev-env
 setup-windows-dev-env.ps1
