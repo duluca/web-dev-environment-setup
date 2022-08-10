@@ -14,24 +14,24 @@ then
     brew upgrade git
 
     echo "Installing GitHub Desktop"
-    brew cask install github
-    brew cask upgrade github
+    brew install github
+    brew upgrade github
 
     echo "Installing NodeJS"
     brew install node@12
     brew upgrade node@12
 
     echo "Installing Docker"
-    brew cask install docker
-    brew cask upgrade docker
+    brew install docker
+    brew upgrade docker
 
     echo "Installing AWS"
     brew install awscli
     brew upgrade awscli
 
     echo "Installing VS Code"
-    brew cask install visual-studio-code
-    brew cask upgrade visual-studio-code
+    brew install visual-studio-code
+    brew upgrade visual-studio-code
 
     echo "Results:"
     echo "Verify installation of AWS, Docker, GitHub Desktop and VS Code manually."
