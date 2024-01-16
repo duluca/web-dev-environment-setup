@@ -18,8 +18,8 @@ then
     brew upgrade github
 
     echo "Installing NodeJS"
-    brew install node@12
-    brew upgrade node@12
+    brew install node@20
+    brew upgrade node@20
 
     echo "Installing Docker"
     brew install docker
@@ -41,6 +41,10 @@ then
     echo "Node: $nodeVersion"
     npmVersion=$(npm -v)
     echo "npm: $npmVersion"
+
+    echo "Ensuring Node LTS is installed"
+    npm i -g n@latest
+    n lts
 else
     echo "Aborted."
 fi
