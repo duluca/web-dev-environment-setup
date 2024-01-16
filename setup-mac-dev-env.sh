@@ -7,7 +7,7 @@ read -r -p "Absolutely NO WARRANTIES or GUARANTEES are provided. Are you sure yo
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
 then
     echo "Installing brew"
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
     echo "Installing git"
     brew install git
