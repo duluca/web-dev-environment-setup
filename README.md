@@ -3,8 +3,11 @@
 
 __Absolutely NO WARRANTIES or GUARANTEES are provided.__
 
+## Get the book
+These scripts have been developed to support my book _Angular for Enterprise Applications_. You can get the book on [AngularForEnterprise.com](https://AngularForEnterprise.com).
+
 ## Minimum System Requirements
-__Windows 10:__ Windows 10 Pro v1703+ with PowerShell v5.1+ (Recommended: [Powershell 7](https://github.com/PowerShell/PowerShell/releases))
+__Windows 10:__ Windows 10 Pro v1703+ with [Powershell 7](https://github.com/PowerShell/PowerShell/releases)
 
 > Install [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701) for the best command-line experience, then set Powershell 7 as the default option in `settings.json`
 
@@ -47,9 +50,8 @@ If you're interested in developing your own scripts and publishing them, check o
 chmod a+x setup-mac-dev-env.sh
 ./setup-mac-dev-env.sh
 ```
-## Get the book
-These scripts have been developed in support of my book _Angular for Enterprise-Ready Web Applications_. You can get the book on http://AngularForEnterprise.com.
 
+## Related Projects
 Check out **LocalCast Weather**, to learn Angular, Material, RxJS fundemantals using OpenWeatherMap.org APIs, at https://github.com/duluca/local-weather-app.
 
 Check out **LemonMart**, an Angular Grocery Store LOB App implemented with a Router-first architecture, at https://github.com/duluca/lemon-mart.
